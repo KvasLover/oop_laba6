@@ -2,11 +2,28 @@
 
 namespace laba5
 {
+    enum Seasons
+    {
+        Winter,
+        Spring,
+        Summer,
+        Autumn
+    }
+
+    struct House
+    {
+        private string street;
+        public int floors;
+        public int rooms;
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"Улица: {street}\nЭтажей: {floors}\nКомнат: {rooms}");
+        }
+    }
     class Program
     {
         static void Main(string[] args)
-        {
-            
+        {            
             // Стандартное переопределение.
             Exam exam = new Exam();
             exam.Show_date();
