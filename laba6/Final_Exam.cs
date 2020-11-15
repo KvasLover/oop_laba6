@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace laba5
+namespace laba6
 {
     // Sealed-класс (не может иметь потомков).
     public sealed class Final_Exam : Exam

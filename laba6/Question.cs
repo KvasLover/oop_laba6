@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace laba5
+namespace laba6
 {
     // Абстрактный класс (не может быть реализован).
     public abstract class Question : Test

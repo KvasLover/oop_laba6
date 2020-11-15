@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace laba5
+namespace laba6
 {
     public class Exam : Quest
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace laba5
+namespace laba6
 {
     enum Seasons
     {
