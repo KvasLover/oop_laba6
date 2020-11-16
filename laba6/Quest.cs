@@ -10,9 +10,6 @@ namespace laba6
         public override string ToString()
         {
             return "Тип этого объекта: " + typeof(Quest) + ". Значение поля этого объекта: " + this.Var + " .";
-        }
-
-             
+        }               
     }
-    
 }

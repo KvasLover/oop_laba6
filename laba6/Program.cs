@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace laba6
 {
@@ -20,6 +21,7 @@ namespace laba6
             Console.WriteLine($"Улица: {street}\nЭтажей: {floors}\nКомнат: {rooms}");
         }
     }
+
     class Program
     {
         static void Main(string[] args)
@@ -70,6 +72,35 @@ namespace laba6
             {
                 printer.iAmPrinting(Array[i]);
             }
+
+            // 3).
+            List<Session> list = new List<Session> { };
+            Session session1 = new Session();
+            session1.offset = "Химия";
+            session1.exam = "ООП";
+            Session session2 = new Session();
+            session2.offset = "Философия";
+            session2.exam = "Математика";
+            Session session3 = new Session();
+            session3.offset = "Психология";
+            session3.exam = "Дизайн";
+            
+            // Добавление элементов в список.
+            session1.Add(session1);            
+            session2.Add(session2);
+            session3.Add(session3);
+            session1.number = 1;
+            session2.number = 2;
+            session3.number = 3;
+
+            // Вывод списка.
+            Session.Display();
+
+            // Удаление элемента из списка
+            Session.Remove(1);
+
+            // Вывод списка.
+            Session.Display();
         }
     }
 }
