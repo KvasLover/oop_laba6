@@ -84,14 +84,17 @@ namespace laba6
             Session session3 = new Session();
             session3.offset = "Психология";
             session3.exam = "Дизайн";
-            
+
             // Добавление элементов в список.
-            session1.Add(session1);            
-            session2.Add(session2);
-            session3.Add(session3);
             session1.number = 1;
             session2.number = 2;
             session3.number = 3;
+            session1.number_of_questions = 4;
+            session2.number_of_questions = 5;
+            session3.number_of_questions = 6;
+            session1.Add(session1);            
+            session2.Add(session2);
+            session3.Add(session3);            
 
             // Вывод списка.
             Session.Display();
@@ -101,6 +104,11 @@ namespace laba6
 
             // Вывод списка.
             Session.Display();
+
+            // 4).
+            Session.Control.Find("Дизайн");
+            Session.Control.Count();
+            Session.Control.Count2(4);
         }
     }
 }
