@@ -4,8 +4,8 @@ using System.Text;
 
 namespace laba6
 {
-    class Exception2 : Exception1
+    class Var_is_not_equal_exam : Exception
     {
-        public Exception2(string message) : base(message) { }
+        public Var_is_not_equal_exam(string message) : base(message) { }
     }
 }

@@ -25,10 +25,78 @@ namespace laba6
     class Program
     {
         static void Main(string[] args)
-        {            
-            // Стандартное переопределение.
-            Exam exam = new Exam();
-            exam.Show_date();
+        {               
+            try
+            {
+                // Для генерации исключения передать нуль.
+                Exam exam = new Exam { Get_Setter = 0 };
+            }
+            catch (Number_is_equal_0 ex)
+            {
+                Console.WriteLine("Number_is_equal_0");
+                Console.WriteLine($"Исключение: {ex.Message}");
+                Console.WriteLine($"Метод: {ex.TargetSite}");
+                Console.WriteLine($"Трассировка стека: {ex.StackTrace}\n");
+            }
+            finally
+            {
+                Console.WriteLine("Это конец первого обработчика исключений.");
+            }
+
+            try
+            {
+                Exam exam = new Exam { Get_Setter2 = "Exam" };
+            }
+            catch (Var_is_not_equal_exam ex)
+            {
+                Console.WriteLine("Var_is_not_equal_exam");
+                Console.WriteLine($"Исключение: {ex.Message}");
+                Console.WriteLine($"Метод: {ex.TargetSite}");
+                Console.WriteLine($"Трассировка стека: {ex.StackTrace}\n");
+            }
+
+            try
+            {
+                Exam exam = new Exam { Get_Setter3 = "Br" };
+            }
+            catch (Length_of_Var_is_less_than_4 ex)
+            {
+                Console.WriteLine("Length_of_Var_is_less_than_4");
+                Console.WriteLine($"Исключение: {ex.Message}");
+                Console.WriteLine($"Метод: {ex.TargetSite}");
+                Console.WriteLine($"Трассировка стека: {ex.StackTrace}\n");
+            }
+
+            // Стандартные исключения.
+            try
+            {
+                Console.WriteLine("На какое число желаете поделить?");
+                Exam exam = new Exam { Get_Setter4 = Convert.ToInt32(Console.ReadLine()) };
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine("DivideByZeroException");
+                Console.WriteLine($"Исключение: {ex.Message}");
+                Console.WriteLine($"Метод: {ex.TargetSite}");
+                Console.WriteLine($"Трассировка стека: {ex.StackTrace}\n");
+            }
+
+            try
+            {
+                Console.WriteLine(" Вам дан массив из пяти элементов. Элемент с каким индексом вывести?");
+                Exam exam = new Exam { Get_Setter5 = Convert.ToInt32(Console.ReadLine()) };
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.WriteLine("IndexOutOfRangeException");
+                Console.WriteLine($"Исключение: {ex.Message}");
+                Console.WriteLine($"Метод: {ex.TargetSite}");
+                Console.WriteLine($"Трассировка стека: {ex.StackTrace}\n");
+            }
+
+ /*           // Стандартное переопределение.
+            Exam exam2 = new Exam();
+            exam2.Show_date();
 
             // Переопределение с использованием Upcast.
             Test test = new Test();            
@@ -61,13 +129,13 @@ namespace laba6
             quest2.Show_date();
 
             // 6).
-            Console.WriteLine(exam.ToString());
+            Console.WriteLine(exam2.ToString());
             Console.WriteLine(quest.ToString());
             Console.WriteLine(test.ToString());
             Console.WriteLine(final_exam.ToString());
 
             // 7).
-            IRealizable[] Array = { quest, test, exam };
+            IRealizable[] Array = { quest, test, exam2 };
             Printer printer = new Printer();
             for (int i = 0; i < Array.Length; i++)
             {
@@ -110,7 +178,7 @@ namespace laba6
             Session.Control.Find("Дизайн");
             Session.Control.Count();
             Session.Control.Count2(4);
-
+*/
         }
     }
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace laba6
 {
-    class Exception3 : Exception2
+    class Length_of_Var_is_less_than_4 : Exception
     {
-        public Exception3(string message) : base(message) { }
+        public Length_of_Var_is_less_than_4(string message) : base(message) { }        
     }
 }

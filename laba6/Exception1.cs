@@ -4,8 +4,8 @@ using System.Text;
 
 namespace laba6
 {
-    class Exception1 : Exception
+    class Number_is_equal_0 : Exception
     {
-        public Exception1(string message) : base(message) { }
+        public Number_is_equal_0(string message) : base(message) { }
     }
 }
