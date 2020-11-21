@@ -12,7 +12,10 @@ namespace laba6
             return "Тип этого объекта: " + typeof(BaseLook) + ". Значение поля этого объекта: " + this.Var + " .";
         }
 
-        public abstract void DoAnswer();
+        public void DoAnswer()
+        {
+            Console.WriteLine("Метод абстрактного класса.");
+        }
         
     }
     

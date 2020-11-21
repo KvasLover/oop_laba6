@@ -6,6 +6,9 @@ namespace laba6
 {
     public interface IAnswer
     {
-        void DoAnswer();
+        void DoAnswer()
+        {
+            Console.WriteLine("Метод интерфейса.");
+        }
     }
 }

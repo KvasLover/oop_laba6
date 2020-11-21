@@ -53,6 +53,7 @@ namespace laba6
             // 4).
             UserClass userclass = new UserClass();
             userclass.DoAnswer();
+            ((IAnswer)userclass).DoAnswer();
 
             // Использование операторов is и as.
             Console.WriteLine(quest is Quest);
@@ -109,6 +110,7 @@ namespace laba6
             Session.Control.Find("Дизайн");
             Session.Control.Count();
             Session.Control.Count2(4);
+
         }
     }
 }
