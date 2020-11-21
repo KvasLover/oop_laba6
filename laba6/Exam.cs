@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Diagnostics;
 
 namespace laba6
 {
@@ -32,7 +33,7 @@ namespace laba6
         {
             get { return var_int; }
             set
-            {
+            {                
                 if (value == 0)
                     throw new Number_is_equal_0("Введённое число нуль - сигнал для генерации этого исключения.");
                 else var_int = value;
@@ -71,6 +72,8 @@ namespace laba6
             {
                 int[] Array = new int[] { 1, 2, 3, 4, 5 };
                 Console.WriteLine(Array[value]);
+                // Макрос Assert().
+                Debug.Assert(Array is object);
             }            
         }
     }

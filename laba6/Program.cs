@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace laba6
 {
@@ -93,7 +94,8 @@ namespace laba6
                 Console.WriteLine($"Метод: {ex.TargetSite}");
                 Console.WriteLine($"Трассировка стека: {ex.StackTrace}\n");
             }
-
+            
+;
  /*           // Стандартное переопределение.
             Exam exam2 = new Exam();
             exam2.Show_date();
